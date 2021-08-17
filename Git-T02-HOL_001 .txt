@@ -1,0 +1,91 @@
+sreeraag@acer MINGW64~
+$ cd Desktop/894380-Git_handsons
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson
+$ git version
+git version 2.31.0.windows.1
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson
+$ git config --global user.name "sreeraag"
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson
+$ git config --global user.email "lsreeraagjk@gmail.com"
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson
+$ git config --global --list
+user.name=sreeraag
+user.email=lsreeraagjk@gmail.com
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson
+$ git init
+Initialized empty Git repository in  C:/Users/acer/Desktop/894380-git_handson/.git
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson (master)
+$ ls -al
+total 20
+drwxr-xr-x 1 acer 197121  0 Aug 16  12:57 ./
+drwxr-xr-x 1 acer 197121  0 Aug 16 12:53 ../
+drwxr-xr-x 1 acer 197121  0 Aug 16 12:56 .git/
+
+
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson (master)
+$ echo "Welcome to the version control" >> welcome.txt
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson (master)
+$ ls -al
+total 21
+drwxr-xr-x 1 acer 197121  0 Aug 16 12:57 ./
+drwxr-xr-x 1 acer 197121  0 Aug 16 12:53 ../
+drwxr-xr-x 1 acer 197121  0 Aug 16 12:56 .git/
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson (master)
+$ cat welcome.txt
+Welcome to the version control
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        welcome.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson (master)
+$ git add welcome.txt
+warning: LF will be replaced by CRLF in welcome.txt.
+The file will have its original line endings in your working directory
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson(master)
+$ git commit
+Aborting commit due to empty commit message.
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson(master)
+$ git commit -m "first commit"
+[master (root-commit) a9d6b58] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 welcome.txt
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson(master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson (master)
+$ git remote add origin https://github.com/sreeraag/GitDemo.git
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson (master)
+$ git push origin master
+remote: Repository not found.
+fatal: repository 'https://github.com/sreeraag/GitDemo.git/' not found
+
+sreeraag@acer MINGW64 ~/Desktop/894380-git_handson (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 250 bytes | 125.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sreeraag/GitDemo.git
+ * [new branch]      master -> master
